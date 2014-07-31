@@ -17,14 +17,14 @@
 				<span class="title">Login</span>
 				<form method="post" action="login">
 					<div class="form-control">
-						<label>Username</label>
+						<label>NIK (Nomor Induk Karyawan)</label>
 						<input type="text" name="username"/>
 					</div>
 					<div class="form-control">
 						<label>Password</label>
 						<input type="password" name="password"/>
 					</div>
-					<input type="submit" value="Log Me In!">
+					<input type="submit" value="Log In">
 				</form>
 		</div>
 		<div class="arrow"><i class="fa fa-arrow-circle-right fa-2x"></i></div>
