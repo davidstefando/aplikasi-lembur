@@ -2371,6 +2371,10 @@ header .notification .notification-messages {
     margin-bottom: 20px;
 }
 
+.centered {
+    margin-top: 200px;
+}
+
 table.full {
     margin-top: 20px;
     width: 100%
