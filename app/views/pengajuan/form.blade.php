@@ -33,7 +33,7 @@
 				</div>
 
 				<div class="form-control">
-					<h3>Data Karyawan<a onclick="addForm()" href="#form"><i class="fa fa-plus"></i></a></h3>
+					<h3>Data Karyawan<a class="btn primary" onclick="addForm()" href="#form">Tambah <i class="fa fa-plus"></i></a></h3>
 					<table class="full" id="form">
 						<thead>
 							<th>NIK</th>

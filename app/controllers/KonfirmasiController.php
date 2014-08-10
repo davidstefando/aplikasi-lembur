@@ -38,6 +38,13 @@
 			} else if ('hr') {
 				$pengajuan->disetujui_hr = 1;
 				$pengajuan->status = '<label class="success">Diterima</label>';
+
+				//beritahu user
+				Notifikasi::create(array(
+					'to' => $pengajuan->nik, 
+					'status' => 'unread', 
+					'content' => "Pengajuan Lembur tanggal $pengajuan->tanggal telah diterima"
+				));
 			}
 			$pengajuan->save();
 		}
@@ -56,6 +63,13 @@
 				$pengajuan->disetujui_pimpinan = 0;
 			} else if ('hr') {
 				$pengajuan->disetujui_hr = 0;
+
+				//beritahu user
+				Notifikasi::create(array(
+					'to' => $pengajuan->nik, 
+					'status' => 'unread', 
+					'content' => "Pengajuan Lembur tanggal $pengajuan->tanggal ditolak"
+				));
 			} 
 			$pengajuan->status = '<label class="danger">Ditolak</label>';
 			$pengajuan->save();

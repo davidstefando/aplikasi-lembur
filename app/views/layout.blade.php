@@ -22,13 +22,11 @@
         <i class="fa fa-user fa-fw"></i> {{ Auth::user()->nama }}
       </span>
 
-     <!--  <div class="notification right">
-        <i class="fa fa-bullhorn"></i>
-        <label>100</label>
-        <div class="notification-messages">
-          jasldkfj;alskdjf;ljk
-        </div>
-      </div> -->
+       <div class="notification right">
+        <i class="fa fa-bullhorn" id="notification-button"></i>
+        <label class='unread-notification-count'>10</label>
+        <div class="notification-messages"></div>
+      </div>
   		{{ Menu::renderMenu() }}      
     </header>
 
@@ -37,6 +35,8 @@
     </section>
 
     <script src="{{ asset('javascripts/all-7665c61b.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('javascripts/jquery.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('javascripts/notification.js') }}" type="text/javascript"></script>
     <script type="text/javascript">
     	@yield('script');
     </script>

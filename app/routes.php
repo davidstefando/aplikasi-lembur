@@ -60,4 +60,11 @@ Route::group(array('before' => 'auth'), function(){
 	Route::post('laporan/{jenis}', array('uses' => 'PengajuanController@showLaporan'));
 });
 
+
+//notifikasi
+Route::get('read/{id}', array('uses' => 'SiteController@readNotification'));
+Route::get('notification', array('uses' => 'SiteController@getNotificationFor'));
+Route::get('notification-count', array('uses' => 'SiteController@getUnreadNotificationCountFor'));
+
+
 require "menu.php";
