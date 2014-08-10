@@ -9,6 +9,7 @@ if (isset(Auth::user()->jabatan)) {
 Menu::addPrimaryMenu(array('name' => 'pengajuan', 'url' => 'pengajuan', 'text' => 'PENGAJUAN', 'icon' => 'fa fa-chevron-circle-right'));
 Menu::addSecondaryMenu(array('url' => 'pengajuan', 'text' => 'PENGAJUAN LEMBUR', 'icon' => 'fa fa-file-o', 'parent' => 'pengajuan'));
 Menu::addSecondaryMenu(array('url' => 'status', 'text' => 'STATUS PENGAJUAN', 'icon' => 'fa fa-eye', 'parent' => 'pengajuan'));
+Menu::addSecondaryMenu(array('url' => 'changepassword', 'text' => 'GANTI PASSWORD', 'icon' => 'fa fa-gear', 'parent' => 'pengajuan'));	
 //Menu::addSecondaryMenu(array('url' => 'history', 'text' => 'HISTORY LEMBUR', 'icon' => 'fa fa-calendar', 'parent' => 'pengajuan'));
 	
 

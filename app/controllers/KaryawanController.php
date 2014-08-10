@@ -140,6 +140,24 @@ class KaryawanController extends \BaseController {
 		return Redirect::route('karyawan.index');
 	}
 
+	public function showChangePasswordForm()
+	{
+		return View::make('changepassword');
+	}
+
+	public function changePassword()
+	{
+		if (Auth::attempt(array('username' => Auth::user()->username, 'password' => Input::get('oldpassword')))) {
+			$newPassword = Hash::make(Input::get('newpassword'));
+			$karyawan = Karyawan::find(Auth::user()->nik);
+			$karyawan->password = $newPassword;
+			$karyawan->save();
+			return Redirect::to('/pengajuan');
+		} else {
+			return Redirect::to('/changepassword');
+		}
+
+	}
 
 	/**
 	 * Remove the specified resource from storage.
