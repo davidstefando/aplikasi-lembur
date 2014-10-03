@@ -1,6 +1,6 @@
 @extends('layout')
 @section('content')
-	@if ($errors->any())
+		@if ($errors->any())
 			<ul>
 				{{ implode('', $errors->all('<li class="error">:message</li>')) }}
 			</ul>
@@ -21,15 +21,15 @@
 				</div>
 				<div class="form-control">
 					<label>Mulai</label>
-					{{ Form::text('mulai') }}
+					{{ Form::text('mulai', Input::old('mulai')) }}
 				</div>
 				<div class="form-control">
 					<label>Selesai</label>
-					{{ Form::text('selesai') }}
+					{{ Form::text('selesai', Input::old('selesai')) }}
 				</div>
 				<div class="form-control">
 					Keperluan <br>
-					{{ Form::textarea('keperluan') }}
+					{{ Form::textarea('keperluan', Input::old('keperluan')) }}
 				</div>
 
 				<div class="form-control">

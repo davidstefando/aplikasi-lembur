@@ -10,6 +10,12 @@ class PengajuanController extends BaseController
 	{
 		$this->saveDataToSession();
 		$dataKaryawan = $this->fetchDataKaryawan();
+
+		$start = \Carbon\Carbon::createFromFormat('Y-m-d', Input::get('tanggal'));
+		if ($start->lt(\Carbon\Carbon::now())) {
+			return Redirect::to('pengajuan')
+						->withErrors('Tanggal Tidak Valid');	
+		}
 		return View::make('pengajuan.verifikasi', compact('dataKaryawan'));
 	}
 

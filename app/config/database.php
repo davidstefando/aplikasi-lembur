@@ -57,7 +57,7 @@ return array(
 			'host'      => 'localhost',
 			'database'  => 'lembur',
 			'username'  => 'root',
-			'password'  => '1234',
+			'password'  => '',
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
 			'prefix'    => '',
