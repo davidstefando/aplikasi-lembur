@@ -52,7 +52,7 @@
 			</table>
 
 			{{ link_to('pengajuan/ajukan', 'Verifikasi', array('class' => 'btn primary right')) }}
-			<a href="/pengajuan" class="btn danger right">Batalkan</a>
+			{{ link_to('pengajuan', 'Batalkan', array('class' => 'btn danger right')) }}
 		</div>
 	</div>
 @stop
