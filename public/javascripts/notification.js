@@ -4,7 +4,7 @@ $('#notification-button').click(function(){
 
 
 $.ajax({
-	'url' : '/notification',
+	'url' : 'notification',
 	'type' : 'GET',
 	'success' : function(data){
 		$('.notification-messages').html(data);
@@ -12,7 +12,7 @@ $.ajax({
 });
 
 $.ajax({
-	'url' : '/notification-count',
+	'url' : 'notification-count',
 	'type' : 'GET',
 	'success' : function(data){
 		$('.unread-notification-count').html(data);
