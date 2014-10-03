@@ -74,4 +74,10 @@
 			$pengajuan->status = '<label class="danger">Ditolak</label>';
 			$pengajuan->save();
 		}
+
+		public function detail($id)
+		{
+			$pengajuan = DataPengajuan::where('no_spl', $id)->get();
+			return View::make('konfirmasi.detail', compact('pengajuan'));
+		}
 	}

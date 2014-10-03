@@ -20,6 +20,7 @@
 					<td>
 						{{ link_to_route('setuju', 'Setuju', $data->no_spl, array('class' => 'btn primary small')) }}
 						{{ link_to_route('tolak', 'Tolak', $data->no_spl, array('class' => 'btn danger small')) }}
+						{{ link_to_route('detail-lembur', 'Detail', $data->no_spl, array('class' => 'btn alert small')) }}
 					</td>
 				</tr>
 			@endforeach

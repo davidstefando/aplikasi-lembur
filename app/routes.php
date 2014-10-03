@@ -45,6 +45,7 @@ Route::group(array('before' => 'auth'), function(){
 	Route::get('konfirmasi', array('uses' => 'KonfirmasiController@showDataKonfirmasi'));
 	Route::get('konfirmasi/setuju/{noSpl}', array('as' => 'setuju', 'uses' => 'KonfirmasiController@setuju'));
 	Route::get('konfirmasi/tolak/{noSpl}', array('as' => 'tolak', 'uses' => 'KonfirmasiController@tolak'));
+	Route::get('konfirmasi/detail/{noSpl}', array('as' => 'detail-lembur', 'uses' => 'KonfirmasiController@detail'));
 	Route::get('konfirmasi/notifikasi', array('uses' => 'KonfirmasiController@getNotification'));
 
 	Route::resource('karyawan', 'KaryawanController');

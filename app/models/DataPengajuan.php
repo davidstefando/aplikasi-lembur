@@ -8,4 +8,9 @@ class DataPengajuan extends Eloquent{
 	public $timestamps = false;
 
 	protected $fillable = array('nik');
+
+	public function karyawan()
+	{
+		return $this->hasOne('Karyawan', 'nik', 'nik');
+	}
 }
