@@ -52,8 +52,8 @@ class PengajuanController extends BaseController
 		$pengajuan->keperluan = Session::get('keperluan');
 		$pengajuan->nik = Auth::user()->nik;
 		$pengajuan->id_bagian = Auth::user()->id_bagian;
-		$pengajuan->disetujui_pimpinan = 2;
-		$pengajuan->disetujui_hr = 2;
+		$pengajuan->disetujui_pimpinan = 0;
+		$pengajuan->disetujui_hr = 0;
 		$pengajuan->status = "<label class='danger'>Belum Disetujui</label>";
 
 		$pengajuan->save();
