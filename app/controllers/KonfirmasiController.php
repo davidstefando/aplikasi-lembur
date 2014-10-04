@@ -14,10 +14,13 @@
 			if ('pimpinan' == $jabatan) {
 				return Pengajuan::belumDisetujuiPimpinan()
 										->where('id_bagian', '=', Auth::user()->id_bagian)
+										->where('disetujui_pimpinan', '<>', 2)
 										->get();
 			} else if ('hr' == $jabatan) {
 				return Pengajuan::where('disetujui_pimpinan', '=', 1)
 									->where('disetujui_hr', '=', 0)
+									->where('disetujui_pimpinan', '<>', 2)
+									->where('disetujui_hr', '<>', 2)
 									->get();
 			}
 		}
@@ -60,9 +63,9 @@
 		{
 			$pengajuan = Pengajuan::find($this->id);
 			if ('pimpinan' == $jabatan) {
-				$pengajuan->disetujui_pimpinan = 0;
+				$pengajuan->disetujui_pimpinan = 2;
 			} else if ('hr') {
-				$pengajuan->disetujui_hr = 0;
+				$pengajuan->disetujui_hr = 2;
 
 				//beritahu user
 				Notifikasi::create(array(
